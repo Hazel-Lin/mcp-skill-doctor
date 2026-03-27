@@ -2,7 +2,7 @@
   "name": "mcp-skill-doctor",
   "version": "0.1.0",
   "private": true,
-  "description": "Diagnose why your local MCP server or skill will not start.",
+  "description": "Local-first CLI to diagnose why your MCP server or skill will not start.",
   "license": "MIT",
   "bin": {
     "mcp-skill-doctor": "src/cli.js"

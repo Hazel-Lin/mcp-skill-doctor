@@ -2,7 +2,23 @@
 
 Diagnose why your local MCP server or skill will not start.
 
-`mcp-skill-doctor` is a CLI-first troubleshooting tool for the most painful part of MCP adoption: setup and startup failures on a local machine.
+`mcp-skill-doctor` is a local-first CLI for the most annoying part of MCP adoption: setup failures, missing env vars, bad paths, and processes that exit before you can use them.
+
+If you build MCP servers or agent skills, this is the fast check you run before you waste time blaming the client.
+
+## Why this exists
+
+- `Inspector` helps after a server is already reachable
+- `Validator` checks protocol compliance
+- `mcp-skill-doctor` finds the reason your local setup fails before either of those help
+
+## What it catches
+
+- Command not found in `PATH`
+- Missing `cwd` or referenced file
+- Missing required environment variables
+- Processes that exit immediately
+- Transport mismatch for local `stdio` setups
 
 ## MVP Scope
 
@@ -10,6 +26,13 @@ Diagnose why your local MCP server or skill will not start.
 - Validate command availability, config shape, working directory, and required environment variables
 - Probe whether the target process starts cleanly or exits immediately
 - Print actionable `PASS / WARN / FAIL` results with remediation hints
+
+## Why star this
+
+- Small and practical
+- Useful every time you wire up a new MCP server
+- Easy to run locally, easy to share with teammates
+- Designed around real startup friction, not abstract spec talk
 
 ## Quick Start
 
@@ -85,3 +108,7 @@ node src/cli.js probe --command node -- args examples/crash-server.js
 - Code of conduct: [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md)
 
 If you want to contribute, start with a small fixture, a clearer diagnostic, or a new startup failure case.
+
+## Status
+
+`v0.1.0` is the first public release. The project is intentionally narrow: local startup diagnosis first, everything else later.
