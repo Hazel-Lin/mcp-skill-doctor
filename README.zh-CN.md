@@ -1,8 +1,13 @@
 # mcp-skill-doctor
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![pnpm](https://img.shields.io/badge/pnpm-ready-F69220?logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![Release](https://img.shields.io/github/v/release/Hazel-Lin/mcp-skill-doctor)](https://github.com/Hazel-Lin/mcp-skill-doctor/releases)
+
 诊断你的本地 MCP server 或 skill 为什么起不来。
 
-`mcp-skill-doctor` 是一个本地优先的 CLI，专门处理 MCP 落地时最烦的那层摩擦：配置失败、环境变量缺失、路径错误、以及进程刚启动就退出。
+`mcp-skill-doctor` 是一个本地优先的 CLI，专门处理 MCP 落地时最烦的那层摩擦：`PATH`、`cwd`、环境变量、路径引用，以及进程刚启动就退出。
 
 如果你在做 MCP server 或 agent skill，这个工具适合在你开始怀疑客户端之前先跑一遍。
 
@@ -35,7 +40,7 @@ pnpm run check:broken
 
 ## 为什么值得 star
 
-- 小而实用
+- 小而实用，几分钟就能看懂
 - 每次接新 MCP server 都能用
 - 本地可跑，适合分享给同事或朋友
 - 解决的是真实启动摩擦，而不是抽象协议话题

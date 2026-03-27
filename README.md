@@ -1,10 +1,15 @@
 # mcp-skill-doctor
 
-Diagnose why your local MCP server or skill will not start.
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![pnpm](https://img.shields.io/badge/pnpm-ready-F69220?logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![Release](https://img.shields.io/github/v/release/Hazel-Lin/mcp-skill-doctor)](https://github.com/Hazel-Lin/mcp-skill-doctor/releases)
 
-`mcp-skill-doctor` is a local-first CLI for the most annoying part of MCP adoption: setup failures, missing env vars, bad paths, and processes that exit before you can use them.
+Local-first CLI to diagnose why your MCP server or skill will not start.
 
-If you build MCP servers or agent skills, this is the fast check you run before you waste time blaming the client.
+It checks the boring but expensive stuff first: `PATH`, `cwd`, required env vars, missing files, and processes that exit before the client can use them.
+
+If you build MCP servers or agent skills, this is the quick pre-flight check worth keeping around.
 
 中文版本请见 [README.zh-CN.md](./README.zh-CN.md).
 
@@ -14,7 +19,7 @@ If you build MCP servers or agent skills, this is the fast check you run before 
 - `Validator` checks protocol compliance
 - `mcp-skill-doctor` finds the reason your local setup fails before either of those help
 
-Try `pnpm run check:broken` when you want to see a realistic failure report.
+Try `pnpm run check:broken` to see a realistic failure report.
 
 ## What it catches
 
@@ -33,10 +38,10 @@ Try `pnpm run check:broken` when you want to see a realistic failure report.
 
 ## Why star this
 
-- Small and practical
+- Small enough to understand in one sitting
 - Useful every time you wire up a new MCP server
-- Easy to run locally, easy to share with teammates
-- Designed around real startup friction, not abstract spec talk
+- Easy to run locally and easy to share with teammates
+- Built around real startup friction, not abstract spec talk
 
 ## Quick Start
 
