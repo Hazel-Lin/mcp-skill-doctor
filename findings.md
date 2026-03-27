@@ -15,3 +15,4 @@
 - A simple `check` + `probe` CLI pair is enough to demonstrate value in the first release.
 - Early-exit detection plus actionable hints already creates a convincing MVP wow moment.
 - For open-source readiness, the project needs clear scope guardrails so contributors do not expand it into a generic inspector or platform.
+- For the local repo, `pnpm run ...` is a more reliable validation path than `pnpm exec mcp-skill-doctor` before publishing the package.

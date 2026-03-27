@@ -1,16 +1,23 @@
 {
   "name": "mcp-skill-doctor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Local-first CLI to diagnose why your MCP server or skill will not start.",
   "license": "MIT",
+  "packageManager": "pnpm@10.14.0",
   "bin": {
-    "mcp-skill-doctor": "src/cli.js"
+    "mcp-skill-doctor": "dist/cli.js"
   },
   "scripts": {
-    "check:broken": "node src/cli.js check --config examples/broken-server.json",
-    "check:valid": "node src/cli.js check --config examples/valid-server.json",
-    "probe:fake": "node src/cli.js probe --command node -- args examples/fake-server.js",
-    "probe:crash": "node src/cli.js probe --command node -- args examples/crash-server.js"
+    "build": "tsc -p tsconfig.json",
+    "check:broken": "pnpm build && node dist/cli.js check --config examples/broken-server.json",
+    "check:valid": "pnpm build && node dist/cli.js check --config examples/valid-server.json",
+    "probe:fake": "pnpm build && node dist/cli.js probe --command node -- args examples/fake-server.js",
+    "probe:crash": "pnpm build && node dist/cli.js probe --command node -- args examples/crash-server.js",
+    "prepack": "pnpm build"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.1",
+    "typescript": "^5.9.3"
   }
 }

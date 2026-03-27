@@ -10,7 +10,7 @@ Create a new project at `/Users/linhuizi/Desktop/mcp-skill-doctor`, define an MV
 |-------|--------|-------|
 | Workspace setup | complete | Project folder and planning files created |
 | PRD and task breakdown | complete | PRD and tasks written in docs/ |
-| MVP implementation | complete | CLI, fixtures, and package metadata added |
+| MVP implementation | complete | Migrated to TypeScript + pnpm, CLI and fixtures still pass smoke tests |
 | Verification and wrap-up | complete | Smoke checks passed and docs updated |
 
 ## Scope Guardrails

@@ -11,3 +11,5 @@
 - Smoke-tested broken config, valid config, healthy process, and crashing process cases.
 - Updated README with verified commands and example output.
 - Added open-source project files: license, contribution guide, security policy, code of conduct, issue templates, PR template, and `.gitignore`.
+- Migrated implementation to TypeScript with `pnpm` and a compiled `dist/cli.js` entrypoint.
+- Verified the TypeScript build and `pnpm run` smoke checks after migration.

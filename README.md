@@ -12,6 +12,8 @@ If you build MCP servers or agent skills, this is the fast check you run before 
 - `Validator` checks protocol compliance
 - `mcp-skill-doctor` finds the reason your local setup fails before either of those help
 
+Try `pnpm run check:broken` when you want to see a realistic failure report.
+
 ## What it catches
 
 - Command not found in `PATH`
@@ -37,8 +39,9 @@ If you build MCP servers or agent skills, this is the fast check you run before 
 ## Quick Start
 
 ```bash
-node src/cli.js check --config examples/broken-server.json
-node src/cli.js probe --command node -- args examples/fake-server.js
+pnpm install
+pnpm run check:valid
+pnpm run probe:fake
 ```
 
 ## Config Format
@@ -61,7 +64,7 @@ node src/cli.js probe --command node -- args examples/fake-server.js
 Validate config, local environment, and startup preconditions.
 
 ```bash
-node src/cli.js check --config path/to/server.json
+pnpm run check:valid
 ```
 
 ### `probe`
@@ -69,7 +72,7 @@ node src/cli.js check --config path/to/server.json
 Start a local process and watch whether it spawns correctly or exits too early.
 
 ```bash
-node src/cli.js probe --command node -- args path/to/server.js
+pnpm run probe:fake
 ```
 
 ## Example Output
@@ -87,10 +90,10 @@ PASS process started successfully: node
 The current MVP was smoke-tested with:
 
 ```bash
-node src/cli.js check --config examples/broken-server.json
-node src/cli.js check --config examples/valid-server.json
-node src/cli.js probe --command node -- args examples/fake-server.js
-node src/cli.js probe --command node -- args examples/crash-server.js
+pnpm run check:broken
+pnpm run check:valid
+pnpm run probe:fake
+pnpm run probe:crash
 ```
 
 ## Roadmap
