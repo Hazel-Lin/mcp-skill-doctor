@@ -1,0 +1,8 @@
+{
+  "name": "broken-server",
+  "command": "uvx-not-installed",
+  "args": ["examples/missing-server.js"],
+  "cwd": "./missing-dir",
+  "transport": "stdio",
+  "requiredEnv": ["OPENAI_API_KEY"]
+}

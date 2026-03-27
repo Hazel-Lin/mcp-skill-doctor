@@ -1,0 +1,16 @@
+{
+  "name": "mcp-skill-doctor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Diagnose why your local MCP server or skill will not start.",
+  "license": "MIT",
+  "bin": {
+    "mcp-skill-doctor": "src/cli.js"
+  },
+  "scripts": {
+    "check:broken": "node src/cli.js check --config examples/broken-server.json",
+    "check:valid": "node src/cli.js check --config examples/valid-server.json",
+    "probe:fake": "node src/cli.js probe --command node -- args examples/fake-server.js",
+    "probe:crash": "node src/cli.js probe --command node -- args examples/crash-server.js"
+  }
+}

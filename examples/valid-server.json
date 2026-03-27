@@ -1,0 +1,8 @@
+{
+  "name": "valid-server",
+  "command": "node",
+  "args": ["examples/fake-server.js"],
+  "cwd": "..",
+  "transport": "stdio",
+  "requiredEnv": []
+}
