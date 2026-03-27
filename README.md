@@ -6,6 +6,8 @@ Diagnose why your local MCP server or skill will not start.
 
 If you build MCP servers or agent skills, this is the fast check you run before you waste time blaming the client.
 
+中文版本请见 [README.zh-CN.md](./README.zh-CN.md).
+
 ## Why this exists
 
 - `Inspector` helps after a server is already reachable
